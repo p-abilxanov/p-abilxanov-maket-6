@@ -1,0 +1,76 @@
+.review {
+    background-color: $reviewBgColor;
+
+    button {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background-color: none;
+    }
+}
+
+.review__main {
+    @include flexbox(none, center, center);
+    position: relative;
+}
+
+.review-carousel {
+    position: relative;
+    @include flexbox(column, center, center);
+
+    .slick-list {
+        margin: 0 auto;
+    }
+
+    .slick-dots {
+        width: 100%;
+        @include flexbox(none, center, center);
+        position: absolute;
+
+        li:nth-child(n + #{$slideItemCount + 1}) {
+            display: none;
+        }
+
+        .slick-active {
+            button {
+                background-color: $reviewSlickActiveBgColor;
+            }
+        }
+
+        li {
+            button {
+                font-size: 0;
+                background-color: $reviewSlickBgColor;
+                outline: none;
+                border: none;
+                @include blockSize(26px, 3px);
+                transition: background-color .5s;
+            }
+        }
+    }
+
+    .review__item {
+        box-shadow: $reviewItemBoxShadow;
+        position: relative;
+
+        .review__content {
+            .review__title {
+                font-family: $fontFamilyRalewaySemiBold;
+                color: $reviewTitleColor;
+                line-height: 1.364;
+            }
+
+            .review__subtitle {
+                font-family: $fontFamilyRalewayBold;
+                color: $reviewSubtitleColor;
+                line-height: 1.2;
+            }
+
+            .review__text {
+                font-family: $fontFamilyRalewayLight;
+                color: $reviewTextColor;
+                line-height: 1.563;
+            }
+        }
+    }
+}

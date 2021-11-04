@@ -1,0 +1,99 @@
+@media only screen and (max-width: 1200px) and (min-width: 851px) {
+    .features .container {
+        padding-left: $featuresContainerPadding;
+        padding-right: $featuresContainerPadding;
+    }
+}
+
+@media only screen and (min-width: 851px) {
+    .features {
+        .container {
+            @include flexbox(none, space-between, flex-start);
+            padding-top: $featuresContainerPaddingTop;
+            padding-bottom: $featuresContainerPaddingBottom;
+            min-height: $featuresContainerHeight;
+
+            .features__item {
+                flex-basis: $featuresItemFlexBasis;
+
+                &:nth-child(even) {
+                    align-self: flex-end;
+                }
+
+                .features__number {
+                    padding-bottom: $featuresNumberPaddingBottom;
+                    font-size: $featuresNumberFontSize;
+                }
+
+                .features__title {
+                    font-size: $featuresTitleFontSize;
+                    padding-bottom: $featuresTitlePaddingBottom;
+                }
+
+                .features__text {
+                    font-size: $featuresTextFontSize;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 850px) and (min-width: 540px) {
+    .features {
+        .container {
+            @include flexbox(none, space-between, flex-start);
+            flex-wrap: wrap;
+            padding: $mobileFeaturesPadding;
+            min-height: $mobileFeaturesHeight;
+
+            .features__item {
+                flex-basis: calc(50% - 35px);
+
+                &:nth-child(even) {
+                    align-self: flex-end;
+                }
+
+                .features__number {
+                    padding-bottom: $featuresNumberPaddingBottom;
+                    font-size: $featuresNumberFontSize;
+                }
+
+                .features__title {
+                    font-size: $featuresTitleFontSize;
+                    padding-bottom: $featuresTitlePaddingBottom;
+                }
+
+                .features__text {
+                    font-size: $featuresTextFontSize;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .features {
+        .container {
+            @include flexbox(column, none, center);
+            padding: calc(.7em + 6vw) $featuresContainerPadding calc(.4em + 5vw) $featuresContainerPadding;
+
+            .features__item {
+                .features__number {
+                    padding-bottom: calc(.3em + 4vw);
+                    font-size: calc(1em + 10vw);
+                }
+
+                .features__title {
+                    font-size: calc(.3em + 3vw);
+                    padding-bottom: calc(.3em + 4vw);
+                }
+
+                .features__text {
+                    font-size: calc(.2em + 2.5vw);
+                    padding-bottom: calc(.3em + 4vw);
+                }
+            }
+        }
+    }
+}

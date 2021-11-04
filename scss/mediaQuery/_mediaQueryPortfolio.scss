@@ -1,0 +1,297 @@
+@media only screen and (max-width: 1199px) {
+    .portfolioTabs {
+        padding: 0 $portfolioTabsPadding;
+    }
+}
+
+@media only screen and (min-width: 851px) {
+    .portfolio {
+        .container {
+            padding-top: $portfolioContainerPaddingTop;
+            padding-bottom: $portfolioContainerPaddingBottom;
+        }
+    }
+
+    .portfolioTabs {
+        input {
+            @for $i from 1 through 3 {
+                &[id="portfolio#{$i}"]:checked {
+                    &~.portfolio__label {
+                        label[for="portfolio#{$i}"] {
+                            text-shadow:
+                                1px 0 0 $portfolioMainColor,
+                                0 1px 0 $portfolioMainColor,
+                                -1px 0 0 $portfolioMainColor,
+                                0 -1px 0 $portfolioMainColor,
+                                1px 1px 0 $portfolioMainColor,
+                                -1px 1px 0 $portfolioMainColor,
+                                1px -1px 0 $portfolioMainColor,
+                                -1px -1px 0 $portfolioMainColor;
+                            border-color: $portfolioMainColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio__label {
+        @include flexbox(none, none, none);
+
+        label {
+            font-size: $portfolioTabLabelFontSize;
+            padding-bottom: $portfolioTabLabelPaddingBottom;
+            padding-right: 1px;
+            text-shadow:
+                1px 0 0 transparent,
+                0 1px 0 transparent,
+                -1px 0 0 transparent,
+                0 -1px 0 transparent,
+                1px 1px 0 transparent,
+                -1px 1px 0 transparent,
+                1px -1px 0 transparent,
+                -1px -1px 0 transparent;
+
+            &:nth-child(n+2) {
+                margin-left: $portfolioTabLabelMarginLeft;
+            }
+        }
+    }
+
+    .portfolioTabs__main {
+        margin-top: $portfolioTabMainMarginTop;
+        @include flexbox(none, none, none);
+        display: none;
+        height: $portfolioTabMainHeight;
+
+        input {
+            &:checked+label {
+                flex-basis: 40%;
+            }
+        }
+
+        .portfolio__tabs {
+            flex-basis: 25%;
+            box-shadow: $portfolioTabsBoxShadow;
+            padding: $portfolioTabsPadding;
+
+            .portfolioTabs__hover {
+                .portfolioTabs-hoverMain {
+                    @include blockSize($portfolioTabsHoverMainSize, $portfolioTabsHoverMainSize);
+
+                    i {
+                        font-size: $portfolioTabsHoverMainFontSize;
+                    }
+                }
+            }
+
+            .portfolioTabs__title {
+                font-size: $portfolioTabsHoverTitleFontSize;
+            }
+
+            .portfolioTabs__text {
+                font-size: $portfolioTabsHoverTextFontSize;
+            }
+        }
+    }
+
+    @for $k from 1 through 3 {
+        .portfolioTabs#{$k} {
+            @for $i from 1 through 4 {
+                label[for="portfolio__tabs#{$i + ($k - 1) * 4}"] {
+                    background: url(../image/portfolio#{$i}.png);
+                    background-size: 100% 100%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 540px) {
+    .portfolio {
+        .container {
+            padding-top: $portfolioContainerPaddingTop;
+            padding-bottom: $portfolioContainerPaddingBottom;
+        }
+    }
+
+    .portfolioTabs {
+        input {
+            @for $i from 1 through 3 {
+                &[id="portfolio#{$i}"]:checked {
+                    &~.portfolio__label {
+                        label[for="portfolio#{$i}"] {
+                            text-shadow:
+                                1px 0 0 $portfolioMainColor,
+                                0 1px 0 $portfolioMainColor,
+                                -1px 0 0 $portfolioMainColor,
+                                0 -1px 0 $portfolioMainColor,
+                                1px 1px 0 $portfolioMainColor,
+                                -1px 1px 0 $portfolioMainColor,
+                                1px -1px 0 $portfolioMainColor,
+                                -1px -1px 0 $portfolioMainColor;
+                            border-color: $portfolioMainColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio__label {
+        @include flexbox(none, space-between, center);
+
+        label {
+            font-size: $portfolioTabLabelFontSize;
+            padding-bottom: $portfolioTabLabelPaddingBottom;
+            padding-right: 1px;
+            text-shadow:
+                1px 0 0 transparent,
+                0 1px 0 transparent,
+                -1px 0 0 transparent,
+                0 -1px 0 transparent,
+                1px 1px 0 transparent,
+                -1px 1px 0 transparent,
+                1px -1px 0 transparent,
+                -1px -1px 0 transparent;
+        }
+    }
+
+    @for $k from 1 through 3 {
+        .portfolioTabs#{$k} {
+            @for $i from 1 through 4 {
+                label[for="portfolio__tabs#{$i + ($k - 1) * 4}"] {
+                    background: url(../image/portfolio#{$i}.png);
+                    background-size: 100% auto;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    .portfolioTabs__main {
+        @include flexbox(column, none, none);
+        display: none;
+
+        .portfolio__tabs {
+            height: $portfolioTabMainHeight;
+            margin-top: $portfolioTabMainMarginTop;
+            box-shadow: $portfolioTabsBoxShadow;
+            padding: $portfolioTabsPadding;
+
+            .portfolioTabs__hover {
+                .portfolioTabs-hoverMain {
+                    @include blockSize($portfolioTabsHoverMainSize, $portfolioTabsHoverMainSize);
+
+                    i {
+                        font-size: $portfolioTabsHoverMainFontSize;
+                    }
+                }
+            }
+
+            .portfolioTabs__title {
+                font-size: $mobilePortfolioTabsHoverTitleFontSize;
+            }
+
+            .portfolioTabs__text {
+                font-size: $mobilePortfolioTabsHoverTextFontSize;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .portfolio {
+        .container {
+            padding-top: calc(.5em + 5vw);
+            padding-bottom: calc(.5em + 5vw);
+        }
+    }
+
+    .portfolioTabs {
+        input {
+            @for $i from 1 through 3 {
+                &[id="portfolio#{$i}"]:checked {
+                    &~.portfolio__label {
+                        label[for="portfolio#{$i}"] {
+                            text-shadow:
+                                .4px 0 0 $portfolioMainColor,
+                                0 .4px 0 $portfolioMainColor,
+                                -.4px 0 0 $portfolioMainColor,
+                                0 -.4px 0 $portfolioMainColor,
+                                .4px .4px 0 $portfolioMainColor,
+                                -.4px .4px 0 $portfolioMainColor,
+                                .4px -.4px 0 $portfolioMainColor,
+                                -.4px -.4px 0 $portfolioMainColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio__label {
+        @include flexbox(none, space-between, center);
+
+        label {
+            font-size: calc(.2em + 2vw);
+            padding-bottom: calc(.2em + 2vw);
+            padding-right: 1px;
+            text-shadow:
+                .4px 0 0 transparent,
+                0 .4px 0 transparent,
+                -.4px 0 0 transparent,
+                0 -.4px 0 transparent,
+                .4px .4px 0 transparent,
+                -.4px .4px 0 transparent,
+                .4px -.4px 0 transparent,
+                -.4px -.4px 0 transparent;
+        }
+    }
+
+    @for $k from 1 through 3 {
+        .portfolioTabs#{$k} {
+            @for $i from 1 through 4 {
+                label[for="portfolio__tabs#{$i + ($k - 1) * 4}"] {
+                    background: url(../image/portfolio#{$i}.png);
+                    background-size: 100% auto;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    .portfolioTabs__main {
+        @include flexbox(column, none, none);
+        display: none;
+
+        .portfolio__tabs {
+            height: calc(4em + 60vw);
+            margin-top: calc(.4em + 4vw);
+            box-shadow: inset 0 calc(-4em - 60vw) 0 rgba(0, 32, 58, .8);
+            padding: calc(.4em + 4vw);
+
+            .portfolioTabs__hover {
+                .portfolioTabs-hoverMain {
+                    @include blockSize(calc(.7em + 7vw), calc(.7em + 7vw));
+
+                    i {
+                        font-size: calc(.3em + 3vw);
+                    }
+                }
+            }
+
+            .portfolioTabs__title {
+                font-size: calc(.3em + 3vw);
+            }
+
+            .portfolioTabs__text {
+                font-size: calc(.3em + 2vw);
+            }
+        }
+    }
+}

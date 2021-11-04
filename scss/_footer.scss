@@ -1,0 +1,45 @@
+.footer {
+    background-color: $footerBgColor;
+
+    .container {
+
+        .footer__date,
+        .footer__design {
+            font-family: $fontFamilyRalewayMedium;
+            color: $footerDateColor;
+            line-height: 1.875;
+
+            span {
+                text-transform: uppercase;
+            }
+        }
+
+
+    }
+}
+
+.footer__logo {
+    @include flexbox(column, none, center);
+
+    img {
+        cursor: pointer;
+    }
+
+}
+
+.footer__social {
+    ul {
+        li {
+            a {
+                i {
+                    color: $footerSocialIconColor;
+                    transition: color .5s;
+
+                    &:hover {
+                        color: $footerSocialIconHoverColor;
+                    }
+                }
+            }
+        }
+    }
+}

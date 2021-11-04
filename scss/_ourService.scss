@@ -1,0 +1,102 @@
+.ourService {
+    .container {
+        label {
+            cursor: pointer;
+        }
+    }
+}
+
+.ourService__tabs {
+    overflow: hidden;
+
+    input {
+        display: none;
+
+        @for $i from 1 through 6 {
+            &[id="ourServiceTabs#{$i}"]:checked {
+                &~.ourService__label {
+                    label[for="ourServiceTabs#{$i}"] {
+                        color: $ourServiceLabelColor;
+                        text-shadow:
+                            .5px 0 0 $ourServiceLabelColor,
+                            0 .5px 0 $ourServiceLabelColor,
+                            -.5px 0 0 $ourServiceLabelColor,
+                            0 -.5px 0 $ourServiceLabelColor,
+                            .5px .5px 0 $ourServiceLabelColor,
+                            -.5px .5px 0 $ourServiceLabelColor,
+                            .5px -.5px 0 $ourServiceLabelColor,
+                            -.5px -.5px 0 $ourServiceLabelColor;
+                    }
+                }
+
+                &~.ourServiceTab__main {
+                    .ourServiceTab#{$i} {
+                        top: 0;
+                        transition-delay: .3s;
+                    }
+                }
+            }
+        }
+    }
+
+    .ourService__label {
+        label {
+            @include flexbox(none, none, center);
+            font-family: $fontFamilyRalewayLight;
+            color: rgb(125, 125, 125);
+            line-height: 1.2;
+            letter-spacing: 1px;
+            transition: transform .5s, color .5s, text-shadow .5s;
+            text-shadow:
+                .5px 0 0 transparent,
+                0 .5px 0 transparent,
+                -.5px 0 0 transparent,
+                0 -.5px 0 transparent,
+                .5px .5px 0 transparent,
+                -.5px .5px 0 transparent,
+                .5px -.5px 0 transparent,
+                -.5px -.5px 0 transparent;
+        }
+    }
+
+    .ourServiceTab__main {
+        position: relative;
+    }
+}
+
+.ourServiceTab__content {
+    .ourServiceTab__title {
+        font-family: $fontFamilyPlayFairDisplayRegular;
+        color: $ourServiceTabBtnColor;
+        line-height: 1.2;
+    }
+
+    .ourServiceTab__project {
+        font-family: $fontFamilyRalewayRegular;
+        color: $ourServiceProjectColor;
+    }
+}
+
+.ourServiceTab__comment {
+    .ourServiceTab__text {
+        font-family: $fontFamilyRobotoRegular;
+        color: $ourServiceTabTextColor;
+        line-height: 1.7;
+    }
+
+    .ourServiceTab__btn {
+        button {
+            font-family: $fontFamilyRalewayExtraBold;
+            color: $ourServiceTabBtnColor;
+            border: 2px solid $ourServiceTabBtnColor;
+            transition: background-color .5s, color .5s;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $ourServiceTabBtnHoverBgColor;
+                color: $ourServiceTabBtnHoverColor;
+            }
+        }
+    }
+}

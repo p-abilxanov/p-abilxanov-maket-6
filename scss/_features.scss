@@ -1,0 +1,22 @@
+.features {
+    .container {
+        .features__item {
+            .features__number {
+                font-family: $fontFamilyPlayFairDisplayBold;
+                color: $featuresNumberColor;
+            }
+
+            .features__title {
+                font-family: $fontFamilyRalewaySemiBold;
+                color: $featuresTitleColor;
+                line-height: 1.2;
+            }
+
+            .features__text {
+                font-family: $fontFamilyRalewayLight;
+                color: $featuresTextColor;
+                line-height: 1.562;
+            }
+        }
+    }
+}

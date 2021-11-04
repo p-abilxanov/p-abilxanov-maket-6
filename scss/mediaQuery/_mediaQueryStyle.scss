@@ -1,0 +1,32 @@
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+        margin: 0 auto;
+    }
+
+    .title-group {
+        font-size: 45px;
+        padding: 60px 0;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1199px) and (min-width: 540px) {
+    .title-group {
+        font-size: 45px;
+        padding: 60px 25px;
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .title-group {
+        font-size: calc(.5em + 5vw);
+        padding: calc(.4em + 5vw) 25px;
+    }
+}

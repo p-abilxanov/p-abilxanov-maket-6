@@ -1,0 +1,35 @@
+.video {
+    .video__main {
+        @include flexbox(none, center, center);
+        position: relative;
+
+        video:hover+.video__play,
+        .video__play:hover {
+            display: none;
+        }
+
+        .video__play {
+            position: absolute;
+            @include flexbox(column, center, center);
+            transition: display .5s;
+
+            .videoPlay__btn {
+                @include flexbox(none, center, center);
+                border-radius: 50%;
+                background-color: $videoPlayBtnBgColor;
+                box-shadow: $videoPlayBtnBoxShadow;
+
+                i {
+                    color: $videoPlayIconColor;
+                }
+            }
+
+            .videoPlay__text {
+                font-family: $fontFamilyRalewayRegular;
+                color: $videoPlayIconColor;
+                text-align: center;
+                cursor: default;
+            }
+        }
+    }
+}

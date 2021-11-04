@@ -1,0 +1,183 @@
+@media only screen and (max-width: 1200px) {
+    .form {
+
+        .form__text,
+        form,
+        .form__content {
+            padding: $formTextPadding;
+        }
+    }
+}
+
+@media only screen and (min-width: 851px) {
+    .form {
+        background: $formBg;
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+        background-position: center right;
+
+        .container {
+            padding-bottom: $formContainerPaddingBottom;
+
+            .form__main {
+                width: 50%;
+                padding-right: $formMainPaddingRight;
+
+                .form__title {
+                    padding-bottom: $formMainTitlePaddingBottom;
+                }
+
+                .form__text {
+                    font-size: $formMainTextFontSize;
+                    padding-bottom: $formMainTextPaddingBottom;
+                }
+            }
+        }
+
+        form {
+            label {
+                &::after {
+                    padding: $formLabelAfterPadding;
+                    font-size: $formLabelAfterFontSize;
+                }
+            }
+
+            input {
+                padding: $formInputPadding;
+                margin-top: $formInputMarginTop;
+                font-size: $formInputFontSize;
+            }
+
+            input[type="submit"] {
+                font-size: $formSubmitFontSize;
+                border: $formSubmitBorder;
+                border-radius: 5px;
+            }
+        }
+
+        .form__content {
+            padding-top: $formContentPaddingTop;
+            font-size: $formContentFontSize;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 540px) {
+    .form {
+        background: $mobileFormBg;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        .container {
+            padding-bottom: $formContainerPaddingBottom;
+
+            .form__main {
+                @include flexbox(column, none, center);
+
+                .form__title {
+                    width: 80%;
+                    text-align: center;
+                    padding-bottom: $formMainTitlePaddingBottom;
+                }
+
+                .form__text {
+                    width: 70%;
+                    text-align: center;
+                    font-size: $formMainTextFontSize;
+                    padding-bottom: $formMainTextPaddingBottom;
+                }
+            }
+        }
+
+        form {
+            width: 60%;
+
+            label {
+                &::after {
+                    padding: $formLabelAfterPadding;
+                    font-size: $formLabelAfterFontSize;
+                }
+            }
+
+            input {
+                padding: $formInputPadding;
+                margin-top: $formInputMarginTop;
+                font-size: $formInputFontSize;
+            }
+
+            input[type="submit"] {
+                font-size: $formSubmitFontSize;
+                border: $formSubmitBorder;
+                border-radius: 5px;
+            }
+        }
+
+        .form__content {
+            width: 60%;
+            text-align: center;
+            padding-top: $formContentPaddingTop;
+            font-size: $formContentFontSize;
+        }
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .form {
+        background: url(../image/form.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        .container {
+            padding-bottom: calc(.5em + 6vw);
+
+            .form__main {
+                @include flexbox(column, none, center);
+
+                .form__title {
+                    width: 100%;
+                    text-align: center;
+                    padding-bottom: calc(.4em + 4vw);
+                }
+
+                .form__text {
+                    width: 100%;
+                    text-align: center;
+                    font-size: calc(.2em + 2vw);
+                    padding-bottom: calc(.1em + 1.5vw);
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+
+            label {
+                &::after {
+                    padding: calc(.2em + 2vw) 0px;
+                    font-size: calc(.2em + 3vw);
+                }
+            }
+
+            input {
+                padding: calc(.2em + 2vw) 0px calc(.2em + 2vw) 4px;
+                margin-top: calc(.4em + 4vw);
+                font-size: calc(.2em + 2vw);
+            }
+
+            input[type="submit"] {
+                font-size: calc(.2em + 2vw);
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 5px;
+            }
+        }
+
+        .form__content {
+            width: 100%;
+            text-align: center;
+            padding-top: calc(.3em + 4vw);
+            font-size: calc(.2em + 2vw);
+        }
+    }
+}

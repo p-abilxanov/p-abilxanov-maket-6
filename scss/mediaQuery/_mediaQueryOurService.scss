@@ -1,0 +1,271 @@
+@media only screen and (max-width: 1199px) and (min-width: 851px) {
+    .ourService__tabs {
+        padding: 0 $ourServiceTabsPadding;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    .ourService__label,
+    figcaption {
+        padding: 0 $ourServiceTabsPadding;
+    }
+}
+
+
+@media only screen and (min-width: 851px) {
+    .ourService {
+        .container {
+            padding-bottom: $ourServicePaddingBottom;
+        }
+    }
+
+    .ourService__tabs {
+        width: 100%;
+        @include flexbox(none, none, none);
+
+        input {
+            @for $i from 1 through 6 {
+                &[id="ourServiceTabs#{$i}"]:checked {
+                    &~.ourService__label {
+                        label[for="ourServiceTabs#{$i}"] {
+                            transform: translateX(35px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .ourService__label {
+            @include flexbox(column, space-between, none);
+            flex-basis: 25%;
+
+            label {
+                font-size: $ourServiceLabelFontSize;
+                padding-right: $ourServiceLabelPaddingRight;
+            }
+        }
+
+        .ourServiceTab__main {
+            flex-basis: 75%;
+            height: $ourServiceMainHeight;
+
+            .ourServiceTab__item {
+                @include blockSize(100%, 100%);
+                @include flexbox(column, none, none);
+                position: absolute;
+                top: -150%;
+                transition: top .5s;
+                transition-delay: 0s;
+
+                figure {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                figcaption {
+                    padding-top: $ourServiceFigCaptionPaddingTop;
+                    @include flexbox(column, none, none);
+                }
+            }
+        }
+    }
+
+    .ourServiceTab__content {
+        @include flexbox(none, space-between, baseline);
+
+        .ourServiceTab__title {
+            flex-basis: 60%;
+            font-size: $ourServiceTabTitleFontSize;
+            padding-bottom: $ourServiceTabTitlePaddingBottom;
+        }
+
+        .ourServiceTab__project {
+            font-size: $ourServiceTabProjectFontSize;
+        }
+    }
+
+    .ourServiceTab__comment {
+        @include flexbox(none, space-between, flex-end);
+
+        .ourServiceTab__text {
+            flex-basis: 60%;
+            font-size: $ourServiceTabTextFontSize;
+        }
+
+
+        .ourServiceTab__btn {
+            flex-basis: 40%;
+            @include flexbox(none, flex-end, center);
+
+            button {
+                padding: $ourServiceTabBtnPadding;
+                font-size: $ourServiceTabBtnFontSize;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 850px) and (min-width: 540px) {
+    .ourService {
+        .container {
+            padding-bottom: calc(.3em + 4vw);
+        }
+    }
+
+    .ourService__tabs {
+        width: 100%;
+        @include flexbox(column, none, none);
+
+        .ourService__label {
+            @include flexbox(none, space-between, none);
+            flex-wrap: wrap;
+            width: 100%;
+
+            label {
+                flex-basis: calc(50% - 30px);
+                font-size: $ourServiceLabelFontSize;
+                margin-bottom: $ourServiceLabelMarginBottom;
+            }
+        }
+
+        .ourServiceTab__main {
+            min-height: $ourServiceMainMinHeight;
+            overflow: hidden;
+
+            .ourServiceTab__item {
+                @include blockSize(100%, 100%);
+                @include flexbox(column, none, none);
+                position: absolute;
+                top: -150%;
+                transition: top .5s;
+                transition-delay: 0s;
+
+                figure {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                figcaption {
+                    padding-top: $ourServiceFigCaptionPaddingTop;
+                    @include flexbox(column, none, none);
+                }
+            }
+        }
+    }
+
+    .ourServiceTab__content {
+        @include flexbox(none, space-between, baseline);
+
+        .ourServiceTab__title {
+            font-size: $ourServiceTabTitleFontSize;
+            padding-bottom: $ourServiceTabTitlePaddingBottom;
+            padding-right: $ourServiceTabTitlePaddingRight;
+        }
+
+        .ourServiceTab__project {
+            font-size: $ourServiceTabProjectFontSize;
+        }
+    }
+
+    .ourServiceTab__comment {
+        @include flexbox(column, none, none);
+
+        .ourServiceTab__text {
+            width: 80%;
+            font-size: $ourServiceTabTextFontSize;
+            padding-bottom: $ourServiceTabTextPaddingBottom;
+        }
+
+
+        .ourServiceTab__btn {
+            @include flexbox(none, none, center);
+
+            button {
+                padding: $ourServiceTabBtnPadding;
+                font-size: $ourServiceTabBtnFontSize;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 539px) {
+    .ourService {
+        .container {
+            padding-bottom: calc(.3em + 4vw);
+        }
+    }
+
+    .ourService__tabs {
+        width: 100%;
+        @include flexbox(column, none, none);
+
+        .ourService__label {
+            @include flexbox(column, none, none);
+            width: 100%;
+
+            label {
+                font-size: calc(.3em + 3vw);
+                margin-bottom: calc(.5em + 4vw);
+            }
+        }
+
+        .ourServiceTab__main {
+            min-height: calc(60vw + 10em);
+            overflow: hidden;
+
+            .ourServiceTab__item {
+                @include blockSize(100%, 100%);
+                @include flexbox(column, none, none);
+                position: absolute;
+                top: -150%;
+                transition: top .5s;
+                transition-delay: 0s;
+
+                figure {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                figcaption {
+                    padding-top: calc(.5em + 5vw);
+                    @include flexbox(column, none, none);
+                }
+            }
+        }
+    }
+
+    .ourServiceTab__content {
+        display: none;
+    }
+
+    .ourServiceTab__comment {
+        @include flexbox(column, none, center);
+
+        .ourServiceTab__text {
+            font-size: calc(.3em + 2vw);
+            padding-bottom: calc(.4em + 4vw);
+        }
+
+
+        .ourServiceTab__btn {
+            @include flexbox(none, none, center);
+
+            button {
+                padding: calc(.3em + 2vw) calc(.5em + 4vw);
+                font-size: calc(.3em + 2vw);
+            }
+        }
+    }
+}

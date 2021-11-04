@@ -1,0 +1,239 @@
+@media only screen and (min-width: 851px) {
+    .review {
+        .container {
+            padding-top: $reviewContainerPaddingTop;
+        }
+    }
+
+    .review__main {
+        padding-bottom: $reviewMainPaddingBottom;
+    }
+
+    .review-carousel {
+        .slick-list {
+            width: 60vw;
+        }
+
+        .slick-dots {
+            bottom: $reviewCarouselSlickDotsBottom;
+
+            li {
+                &:nth-child(n+2) {
+                    margin-left: $reviewCarouselSlickDotsMarginLeft;
+                }
+            }
+        }
+
+        .review__item {
+            background-color: $reviewCarouselItemBgColor;
+            margin-right: $reviewCarouselItemMarginRight;
+            @include flexbox(none, none, center);
+
+            .review__content {
+                padding: $reviewCarouselItemContentPadding;
+
+                .review__title {
+                    font-size: $reviewCarouselItemTitleFontSize;
+                }
+
+                .review__subtitle {
+                    font-size: $reviewCarouselItemSubtitleFontSize;
+                    padding-bottom: $reviewCarouselItemSubtitlePaddingBottom;
+                }
+
+                .review__text {
+                    font-size: $reviewCarouselItemTextFontSize;
+                }
+            }
+
+            .review__img {
+                z-index: 5;
+                position: absolute;
+                right: $reviewCarouselItemImgRight;
+
+                .reviewImg__main {
+                    @include blockSize($reviewCarouselItemImgWidth, $reviewCarouselItemImgHeight);
+
+                    img {
+                        @include blockSize(100%, 100%);
+                    }
+                }
+            }
+        }
+    }
+
+    .review-btn {
+        position: absolute;
+        z-index: 4;
+        display: block;
+
+        .slick-list {
+            @include blockSize(calc(3em + 10vw), calc(3em + 10vw));
+
+            .btn-img {
+                @include blockSize(calc(3em + 10vw), calc(3em + 10vw));
+                position: relative;
+
+                img {
+                    @include blockSize(100%, 100%);
+                }
+
+                .btn-hover {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include blockSize(100%, 100%);
+                    background-color: $reviewBtnHoverBgColor;
+                    opacity: 1;
+                    transition: opacity .5s;
+
+                    &:hover {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .review__leftBtn {
+        left: 0;
+    }
+
+    .review__rightBtn {
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 540px) {
+    .review {
+        .container {
+            padding-top: $reviewContainerPaddingTop;
+        }
+    }
+
+    .review__main {
+        padding-bottom: $mobileReviewMainPaddingBottom;
+    }
+
+    .review-carousel {
+        .slick-list {
+            width: 90vw;
+        }
+
+        .slick-dots {
+            bottom: $reviewCarouselSlickDotsBottom;
+
+            li {
+                &:nth-child(n+2) {
+                    margin-left: $reviewCarouselSlickDotsMarginLeft;
+                }
+            }
+        }
+
+        .review__item {
+            background-color: $reviewCarouselItemBgColor;
+            margin-right: $reviewCarouselItemMarginRight;
+            @include flexbox(none, none, center);
+
+            .review__content {
+                padding: $reviewCarouselItemContentPadding;
+
+                .review__title {
+                    font-size: $reviewCarouselItemTitleFontSize;
+                }
+
+                .review__subtitle {
+                    font-size: $reviewCarouselItemSubtitleFontSize;
+                    padding-bottom: $reviewCarouselItemSubtitlePaddingBottom;
+                }
+
+                .review__text {
+                    font-size: $reviewCarouselItemTextFontSize;
+                }
+            }
+
+            .review__img {
+                z-index: 5;
+                position: absolute;
+                right: $reviewCarouselItemImgRight;
+
+                img {
+                    @include blockSize($reviewCarouselItemImgWidth, $reviewCarouselItemImgHeight);
+                }
+            }
+        }
+    }
+
+    .review-btn,
+    .review-btn>* {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .review {
+        .container {
+            padding-top: calc(.5em + 5vw);
+        }
+    }
+
+    .review__title,
+    .review__subtitle,
+    .review__text {
+        text-align: center;
+    }
+
+    .review__main {
+        padding-bottom: calc(1em + 10vw);
+    }
+
+    .review-carousel {
+        .slick-list {
+            width: 90vw;
+        }
+
+        .slick-dots {
+            bottom: calc(-.4em - 4vw);
+
+            li {
+                &:nth-child(n+2) {
+                    margin-left: calc(.2em + 1.5vw);
+                }
+            }
+        }
+
+        .review__item {
+            @include flexbox(column, none, center);
+            background: $mobileReviewCarouselItemBgColor;
+
+            .review__content {
+                order: 1;
+                padding: calc(.4em + 4vw);
+
+                .review__title {
+                    font-size: calc(.3em + 4vw);
+                }
+
+                .review__subtitle {
+                    font-size: calc(.2em + 3vw);
+                    padding-bottom: calc(.3em + 3vw);
+                }
+
+                .review__text {
+                    font-size: calc(.2em + 3vw);
+                }
+            }
+
+            .review__img {
+                img {
+                    @include blockSize(60vw, auto);
+                }
+            }
+        }
+    }
+
+    .review-btn,
+    .review-btn>* {
+        display: none;
+    }
+}

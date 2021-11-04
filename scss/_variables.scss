@@ -1,0 +1,239 @@
+// TITLE GROUP
+$titleGroupColor: rgb(0, 32, 58);
+
+// FIRST PAGE VARIABLES
+$headerTellIconSize: 14.562px;
+$headerTellIconColor: #999;
+$headerTellFontSize: 14.562px;
+$headerTellColor: rgb(37, 37, 37);
+$headerSlickDotsBottom: -45px;
+$headerSlickDotsActiveBtnBgColor: #1a444a;
+$headerSlickDotsMarginRight: 12px;
+$headerSlickDotsBtnBgColor: #cdd3cf;
+$firstPageFooterHeight: 90px;
+$firstPageFooterIconMarginLeft: 35px;
+$firstPageFooterIconFontSize: 16px;
+$firstPageFooterIconColor: #b3b9bf;
+$hamburgerMenuIconColor: #fff;
+$hamburgerMenuBgColor: #112537;
+$hamburgerMenuItemColor: rgba(255, 255, 255, 0.502);
+$hamburgerMenuItemTextShadow: 0px 0px 5.16px rgba(0, 1, 6, 0.05);
+$hamburgerMenuItemHoverColor: rgb(248, 162, 90);
+$firstPagePadding: 25px;
+$firstPagePaddingBottom: 90px;
+$firstPageHeaderPadding: 22px 0 33px 0;
+$bannerMainWidth: 365px;
+$bannerTitleFontSize: 62px;
+$bannerTextFontSize: 17px;
+$bannerTextPaddingTop: 20px;
+$bannerTextPaddingBottom: 40px;
+$bannerBtnPadding: 20px 28px;
+$bannerBtnFontSize: 19px;
+$bannerBtnSpanPaddingLeft: 22px;
+$firstPageSliderLabelTop: -50px;
+$hamburgerMenuItemFontSize: 15px;
+$firstPageBannerPaddingRight: 125px;
+$mobileFirstPageHeaderPadding: 60px 35px 33px 35px;
+$mobileFirstPageHeaderLogoLeft: 35px;
+$mobileFirstPageBannerTitleFontSize: 80px;
+$mobileFirstPageBannerTextFontSize: 17px;
+$mobileFirstPageBannerTextPaddingTop: 20px;
+$mobileFirstPageBannerTextPaddingBottom: 40px;
+$mobileFirstPageBtnPadding: 20px 28px;
+$mobileFirstPageBtnText: 19px;
+$mobileFirstPageSliderLabelTop: 50px;
+$mobileFirstPageSliderLabelRight: 35px;
+
+
+// FEATURES VARIABLES
+$featuresNumberColor: rgba(254, 160, 82, 0.259);
+$featuresTitleColor: rgb(26, 41, 47);
+$featuresTextColor: rgb(131, 131, 131);
+$featuresContainerPadding: 25px;
+$featuresContainerPaddingTop: 130px;
+$featuresContainerPaddingBottom: 60px;
+$featuresContainerHeight: calc(490px + 130px + 110px);
+$featuresItemFlexBasis: calc(25% - 25px);
+$featuresNumberPaddingBottom: 24px;
+$featuresNumberFontSize: 85px;
+$featuresTitlePaddingBottom: 27px;
+$featuresTitleFontSize: 22px;
+$featuresTextFontSize: 16px;
+$mobileFeaturesPadding: 100px 25px 60px 25px;
+$mobileFeaturesHeight: 1160px;
+
+
+
+
+// PORTFOLIO VARIABLES
+$portfolioMainColor: rgb(0, 32, 58);
+$portfolioTabsMainBoxShadowColor: rgba(0, 32, 58, .8);
+$portfolioHoverMainBgColor: rgba(254, 188, 128, .94);
+$portfolioHoverMainBoxShadow: 4.5px 7.794px 20.88px 8.12px rgba(0, 1, 6, 0.07);
+$portfolioHoverMainIconColor: #fff;
+$portfolioTabsPadding: 25px;
+$portfolioContainerPaddingTop: 60px;
+$portfolioContainerPaddingBottom: 70px;
+$portfolioTabLabelFontSize: 18px;
+$portfolioTabLabelPaddingBottom: 12px;
+$portfolioTabLabelMarginLeft: 60px;
+$portfolioTabMainMarginTop: 50px;
+$portfolioTabMainHeight: 550px;
+$portfolioTabsPadding: 32px 27px;
+$portfolioTabsBoxShadow: inset 0 -550px 0 rgba(0, 32, 58, .8);
+$portfolioTabsHoverMainSize: 84px;
+$portfolioTabsHoverMainFontSize: 27px;
+$portfolioTabsHoverTitleFontSize: 16px;
+$portfolioTabsHoverTextFontSize: 14px;
+$mobilePortfolioTabsHoverTitleFontSize: 22px;
+$mobilePortfolioTabsHoverTextFontSize: 18px;
+
+
+// OURSERVICE VARIABLES
+$ourServiceLabelColor: #00203a;
+$ourServiceProjectColor: rgb(24, 44, 61);
+$ourServiceTabTextColor: rgb(94, 94, 94);
+$ourServiceTabBtnColor: rgb(0, 32, 58);
+$ourServiceTabBtnHoverBgColor: rgb(248, 162, 90);
+$ourServiceTabBtnHoverColor: #fff;
+$ourServiceTabsPadding: 25px;
+$ourServicePaddingBottom: 70px;
+$ourServiceLabelPaddingRight: 50px;
+$ourServiceLabelFontSize: 18px;
+$ourServiceMainHeight: 620px;
+$ourServiceFigCaptionPaddingTop: 60px;
+$ourServiceTabTitleFontSize: 30px;
+$ourServiceTabTitlePaddingBottom: 20px;
+$ourServiceTabProjectFontSize: 18px;
+$ourServiceTabTextFontSize: 16px;
+$ourServiceTabBtnPadding: 16px 35px;
+$ourServiceTabBtnFontSize: 15px;
+$ourServiceLabelMarginBottom: 60px;
+$ourServiceMainMinHeight: 670px;
+$ourServiceTabTitlePaddingRight: 10px;
+$ourServiceTabTextPaddingBottom: 40px;
+
+
+// VIDEO VARIABLES
+$videoBgColor: rgba($color: #00203a, $alpha: .7);
+$videoPlayBtnBgColor: rgba(254, 188, 128, .949);
+$videoPlayBtnBoxShadow: 4.5px 7.794px 20.88px 8.12px rgba(0, 1, 6, 0.07);
+$videoPlayIconColor: #fff;
+$videoPadding: 60px 0 70px 0;
+$videoPlayBtnSize: 84px;
+$videoPlayBtnFontSize: 24px;
+$videoPlayBtnPaddingLeft: 5px;
+$videoPlayTextFontSize: 18px;
+$videoPlayTextPaddingTop: 25px;
+
+
+// STAGE VARIABLES
+$stageMainTitleColor: rgb(49, 49, 49);
+$stageMainTitleBottomColor: rgb(24, 44, 61);
+$stageMainTitleBottomWidth: 42px;
+$stageMainTitleBottomHeight: 1px;
+$stageMainTextColor: rgb(94, 94, 94);
+$stageMainNumberSize: 90px;
+$stageMainNumberFontSize: 12px;
+$stageMainNumberColor: rgb(0, 32, 58);
+$stageMainNumberSpanFirstBgColor: rgb(253, 229, 209);
+$stageMainNumberSpanSize: 22px;
+$stageMainPadding: 25px;
+$stageContainerPaddingBottom: 70px;
+$stageItemFlexBasis: calc((100% - 70px) / 3);
+$stageItemPadding: 30px 0;
+$stageContentPadding: 24px 0 0 15px;
+$stageContentTitlePaddingBottom: 20px;
+$stageContentTitleFontSize: 22px;
+$stageContentTextPaddingTop: 23px;
+$stageContentTextFontSize: 16px;
+$mobileStageItemFlexBasis: calc((100% - 40px) / 2);
+$mobileStageContentPadding: 20px 0 0 5px;
+$mobileStageContentTitlePaddingBottom: 20px;
+$mobileStageContentTitleFontSize: 20px;
+$mobileStageContentTextPaddingTop: 23px;
+$mobileStageContentTextFontSize: 14px;
+
+
+
+
+
+// FORM VARIABLES
+$formTitleColor: #fff;
+$formTextColor: rgba(255, 255, 255, 0.702);
+$formFormIconColor: rgba(255, 255, 255, 0.6);
+$formSubmitBoxShadow: 0px 0px 48.96px 19.04px rgba(0, 0, 1, 0.02);
+$formSubmitColor: #fff;
+$formSubmitHoverBgColor: #f8a25a;
+$formTextPadding: 0 25px;
+$formBg: url(../image/kitchen2.png),
+rgb(24, 44, 61);
+$formContainerPaddingBottom: 80px;
+$formMainPaddingRight: 60px;
+$formMainTitlePaddingBottom: 30px;
+$formMainTextPaddingBottom: 10px;
+$formMainTextFontSize: 14px;
+$formLabelAfterPadding: 15px 0;
+$formLabelAfterFontSize: 20px;
+$formInputPadding: 15px 0 15px 4px;
+$formInputFontSize: 14px;
+$formInputMarginTop: 30px;
+$formSubmitFontSize: 15px;
+$formSubmitBorder: 2px solid rgb(255, 255, 255);
+$formContentPaddingTop: 25px;
+$formContentFontSize: 14px;
+$mobileFormBg: url(../image/form.png);
+
+
+
+// REVIEW VARIABLES
+$slideItemCount: 3;
+$reviewBgColor: #fdfaf3;
+$reviewSlickActiveBgColor: #1a444a;
+$reviewSlickBgColor: #cdd3cf;
+$reviewItemBoxShadow: 4px 6.928px 36.72px 14.28px rgba(0, 0, 1, 0.02);
+$reviewTitleColor: rgb(49, 49, 49);
+$reviewSubtitleColor: rgb(239, 177, 114);
+$reviewTextColor: rgb(94, 94, 94);
+$reviewContainerPaddingTop: 60px;
+$reviewMainPaddingBottom: 240px;
+$reviewCarouselSlickDotsBottom: -80px;
+$reviewCarouselSlickDotsMarginLeft: 12px;
+$reviewCarouselItemBgColor: #fff;
+$reviewCarouselItemMarginRight: 150px;
+$reviewCarouselItemContentPadding: 50px 100px 50px 50px;
+$reviewCarouselItemTitleFontSize: 22px;
+$reviewCarouselItemSubtitleFontSize: 16px;
+$reviewCarouselItemSubtitlePaddingBottom: 20px;
+$reviewCarouselItemTextFontSize: 16px;
+$reviewCarouselItemImgRight: -150px;
+$reviewCarouselItemImgWidth: 215px;
+$reviewCarouselItemImgHeight: 200px;
+$reviewBtnHoverBgColor: rgba($color: #182c3d, $alpha: .8);
+$mobileReviewCarouselItemBgColor: linear-gradient(to bottom, transparent calc(.5em + 6vw), #fff calc(.5em + 6vw));
+$mobileReviewMainPaddingBottom: 150px;
+
+
+// FOOTER VARIABLES
+$footerBgColor: #182c3d;
+$footerDateColor: rgb(255, 196, 135);
+$footerSocialIconColor: #fff;
+$footerSocialIconHoverColor: rgb(255, 196, 135);
+$footerContainerPadding: 75px 25px;
+$footerDateFontSize: 16px;
+$footerSocialPaddingTop: 40px;
+$footerSocialMarginLeft: 45px;
+$footerSocialFontSize: 18px;
+
+
+// FONT FAMILY VARIABLES
+$fontFamilyRobotoRegular: 'Roboto - Regular';
+$fontFamilyRalewayExtraBold: 'Raleway - ExtraBold';
+$fontFamilyRalewaySemiBold: 'Raleway - SemiBold';
+$fontFamilyRalewayLight: 'Raleway - Light';
+$fontFamilyRalewayMedium: 'Raleway - Medium';
+$fontFamilyRalewayRegular: 'Raleway - Regular';
+$fontFamilyPlayFairDisplayBold: "PlayfairDisplay - Bold";
+$fontFamilyPlayFairDisplayRegular: "PlayfairDisplay - Regular";
+$fontFamilyFontAweSome: 'Font Awesome 5 Free';
+$fontFamilyRalewayBold: "Raleway - Bold"

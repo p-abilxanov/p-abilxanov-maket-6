@@ -1,0 +1,431 @@
+@media only screen and (min-width: 1201px) {
+    .slick-dots {
+        right: $firstPagePadding;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 851px) {
+    .header__tell {
+        padding-right: $firstPagePadding;
+    }
+
+    .firstPage-slider {
+        .container {
+            label {
+                left: $firstPagePadding;
+            }
+        }
+    }
+
+    .slick-dots {
+        right: $firstPagePadding;
+    }
+
+    .firstPage-footer {
+        left: $firstPagePadding;
+    }
+}
+
+@media only screen and (min-width: 851px) {
+    .firstPage {
+        @include blockSize(100%, auto);
+        padding-bottom: $firstPagePaddingBottom;
+    }
+
+    .firstPage-header {
+        .container {
+            @include flexbox(none, flex-end, center);
+            padding: $firstPageHeaderPadding;
+
+            .header__logo {
+                @include flexbox(none, center, center);
+                @include blockSize(100%, 100%);
+                position: absolute;
+
+                .logo768 {
+                    display: none;
+                }
+
+                img {
+                    @include blockSize(62px, 29px);
+                }
+            }
+        }
+    }
+
+    .firstPage-banner {
+        @include blockSize(50%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include flexbox(column, center, flex-end);
+
+        .banner__main {
+            width: $bannerMainWidth;
+
+            .banner__title {
+                font-size: $bannerTitleFontSize;
+            }
+
+            .banner__text {
+                font-size: $bannerTextFontSize;
+                padding-top: $bannerTextPaddingTop;
+                padding-bottom: $bannerTextPaddingBottom;
+            }
+
+            .banner__btn {
+                button {
+                    padding: $bannerBtnPadding;
+                    font-size: $bannerBtnFontSize;
+
+                    span {
+                        img {
+                            @include blockSize(auto, auto);
+                        }
+
+                        padding-left: $bannerBtnSpanPaddingLeft;
+                    }
+                }
+            }
+        }
+    }
+
+    .slider {
+        .slider__item {
+            img {
+                @include blockSize(100%, auto);
+            }
+        }
+    }
+
+    .firstPage-slider {
+        .container {
+            label {
+                position: absolute;
+                top: $firstPageSliderLabelTop;
+
+                span {
+                    @include blockSize(26px, 2px);
+
+                    &:nth-child(n+2) {
+                        margin-top: 6px;
+                    }
+                }
+            }
+
+            input:checked {
+                &~.hamburger-menu {
+                    left: 0;
+                }
+            }
+
+            .hamburger-menu {
+                @include blockSize(100%, 100%);
+                top: 0;
+                left: -200%;
+
+                .social-icon {
+                    display: none;
+                }
+
+                ul {
+                    height: 60%;
+
+                    li {
+                        a {
+                            font-size: $hamburgerMenuItemFontSize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .firstPage-banner {
+        padding-right: $firstPageBannerPaddingRight;
+    }
+}
+
+@media only screen and (max-width: 1049px) and (min-width: 851px) {
+    .firstPage-banner {
+        padding-right: calc(.3em + 2vw);
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 540px) {
+    .firstPage {
+        @include blockSize(100%, 100vh);
+    }
+
+    .firstPage-header {
+        .container {
+            @include flexbox(none, flex-end, center);
+            padding: $mobileFirstPageHeaderPadding;
+
+            .header__logo {
+                position: absolute;
+                left: $mobileFirstPageHeaderLogoLeft;
+
+                .logoDesktop {
+                    display: none;
+                }
+
+                img {
+                    @include blockSize(62px, 29px);
+                }
+            }
+
+            .header__tell {
+                display: none;
+            }
+        }
+    }
+
+    .firstPage-banner {
+        @include blockSize(100%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include flexbox(column, center, center);
+
+        .banner__main {
+            width: 80%;
+            @include flexbox(column, none, center);
+            text-align: center;
+
+            .banner__title {
+                font-size: $mobileFirstPageBannerTitleFontSize;
+            }
+
+            .banner__text {
+                font-size: $mobileFirstPageBannerTextFontSize;
+                padding-top: $mobileFirstPageBannerTextPaddingTop;
+                padding-bottom: $mobileFirstPageBannerTextPaddingBottom;
+            }
+
+            .banner__btn {
+                button {
+                    padding: $mobileFirstPageBtnPadding;
+                    font-size: $mobileFirstPageBtnText;
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        bottom: -100px;
+                        transform-origin: center center;
+                        transform: rotateZ(90deg);
+
+                        img {
+                            @include blockSize(auto, auto);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slider {
+        .slider__item {
+            img {
+                @include blockSize(auto, 100vh);
+            }
+        }
+    }
+
+    .firstPage-slider {
+        @include blockSize(100%, 100%);
+        position: absolute;
+        top: 0;
+
+        .container {
+            label {
+                position: absolute;
+                top: $mobileFirstPageSliderLabelTop;
+                right: $mobileFirstPageSliderLabelRight;
+                z-index: 7;
+
+                span {
+                    @include blockSize(26px, 2px);
+
+                    &:nth-child(n+2) {
+                        margin-top: 6px;
+                    }
+                }
+            }
+
+            input:checked {
+                &~.hamburger-menu {
+                    left: 0;
+                }
+            }
+
+            .hamburger-menu {
+                @include blockSize(100%, 100%);
+                bottom: 0;
+                left: -100%;
+
+                .social-icon {
+                    display: flex;
+
+                    li:nth-child(n+2) {
+                        margin-left: 25px;
+                    }
+                }
+
+                ul {
+                    height: 60%;
+
+                    li {
+                        a {
+                            font-size: $hamburgerMenuItemFontSize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .firstPage-footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .firstPage {
+        @include blockSize(100%, 100vh);
+    }
+
+    .firstPage-header {
+        .container {
+            @include flexbox(none, flex-end, center);
+            padding: calc(.5em + 5vw) calc(.3em + 4vw) calc(.3em + 4vw) calc(.3em + 4vw);
+
+            .header__logo {
+                position: absolute;
+                left: calc(.3em + 4vw);
+
+                .logoDesktop {
+                    display: none;
+                }
+
+                img {
+                    @include blockSize(37px, auto);
+                }
+            }
+
+            .header__tell {
+                display: none;
+            }
+        }
+    }
+
+    .firstPage-banner {
+        @include blockSize(100%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include flexbox(column, center, center);
+
+        .banner__main {
+            width: 80%;
+            @include flexbox(column, none, center);
+            text-align: center;
+
+            .banner__title {
+                font-size: calc(1em + 6vw);
+            }
+
+            .banner__text {
+                font-size: calc(.3em + 3vw);
+                padding-top: calc(.3em + 3vw);
+                padding-bottom: calc(.4em + 4vw);
+            }
+
+            .banner__btn {
+                button {
+                    padding: calc(.2em + 2vw) calc(.3em + 3vw);
+                    font-size: calc(.2em + 3vw);
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        bottom: calc(-2em - 10vw);
+                        transform-origin: center center;
+                        transform: rotateZ(90deg);
+
+                        img {
+                            @include blockSize(auto, auto);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slider {
+        .slider__item {
+            img {
+                @include blockSize(auto, 100vh);
+            }
+        }
+    }
+
+    .firstPage-slider {
+        @include blockSize(100%, 100%);
+        position: absolute;
+        top: 0;
+
+        .container {
+            label {
+                position: absolute;
+                top: calc(.4em + 4vw);
+                right: 35px;
+                z-index: 7;
+
+                span {
+                    @include blockSize(26px, 2px);
+
+                    &:nth-child(n+2) {
+                        margin-top: calc(.1em + 1vw);
+                    }
+                }
+            }
+
+            input:checked {
+                &~.hamburger-menu {
+                    left: 0;
+                }
+            }
+
+            .hamburger-menu {
+                @include blockSize(100%, 100%);
+                bottom: 0;
+                left: -100%;
+
+                .social-icon {
+                    display: flex;
+
+                    li:nth-child(n+2) {
+                        margin-left: calc(.3em + 2vw);
+                    }
+                }
+
+                ul {
+                    height: 60%;
+
+                    li {
+                        a {
+                            font-size: calc(.3em + 3vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .firstPage-footer {
+        display: none;
+    }
+}

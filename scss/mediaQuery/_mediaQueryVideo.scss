@@ -1,0 +1,55 @@
+@media only screen and (min-width: 540px) {
+    .video {
+        padding: $videoPadding;
+
+        .video__main {
+            video {
+                @include blockSize(100%, 80vh);
+            }
+
+            .video__play {
+                .videoPlay__btn {
+                    @include blockSize($videoPlayBtnSize, $videoPlayBtnSize);
+
+                    i {
+                        font-size: $videoPlayBtnFontSize;
+                        padding-left: $videoPlayBtnPaddingLeft;
+                    }
+                }
+
+                .videoPlay__text {
+                    padding-top: $videoPlayTextPaddingTop;
+                    font-size: $videoPlayTextFontSize;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .video {
+        padding: calc(.5em + 5vw) 0;
+
+        .video__main {
+            video {
+                @include blockSize(100%, auto);
+            }
+
+            .video__play {
+                .videoPlay__btn {
+                    @include blockSize(calc(1em + 10vw), calc(1em + 10vw));
+
+                    i {
+                        font-size: calc(.3em + 3vw);
+                        padding-left: $videoPlayBtnPaddingLeft;
+                    }
+                }
+
+                .videoPlay__text {
+                    padding: calc(.3em + 4vw) 25px;
+                    font-size: calc(.2em + 3vw);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.form__main {
+    .form__title {
+        color: $formTitleColor;
+    }
+
+    .form__text {
+        font-family: $fontFamilyRobotoRegular;
+        color: $formTextColor;
+        line-height: 1.714;
+    }
+
+    form {
+        @include flexbox(column, none, none);
+
+        label {
+            cursor: pointer;
+            @include flexbox(none, none, center);
+            position: relative;
+
+            &:nth-child(1)::after {
+                content: "\f007";
+            }
+
+            &:nth-child(2)::after {
+                content: "\f095";
+                font-weight: 900;
+                transform-origin: center center;
+                transform: rotateZ(90deg);
+            }
+
+            &:nth-child(3)::after {
+                content: "\f0e0";
+            }
+
+            &::after {
+                font-family: $fontFamilyFontAweSome;
+                display: block;
+                position: absolute;
+                right: 2px;
+                color: $formFormIconColor;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-family: $fontFamilyRalewayLight;
+            color: $formFormIconColor;
+            line-height: 1.196;
+            border-bottom: 2px solid $formFormIconColor;
+            border-radius: 1px;
+        }
+
+        input[type="submit"] {
+            font-family: $fontFamilyRalewayExtraBold;
+            color: $formSubmitColor;
+            border-radius: 5px;
+            box-shadow: $formSubmitBoxShadow;
+            transition: background-color .5s, border-color .5s;
+
+            &:hover {
+                background-color: $formSubmitHoverBgColor;
+                border-color: transparent;
+            }
+        }
+    }
+
+    .form__content {
+        font-family: $fontFamilyRobotoRegular;
+        color: $formTextColor;
+        line-height: 1.3;
+    }
+}

@@ -1,0 +1,122 @@
+@media only screen and (min-width: 540px) {
+    .stageMain__number {
+        @include blockSize($stageMainNumberSize, $stageMainNumberSize);
+        @include flexbox(none, center, center);
+
+        span {
+            @include flexbox(none, center, center);
+            font-size: $stageMainNumberFontSize;
+            font-family: $fontFamilyRalewayMedium;
+            color: $stageMainNumberColor;
+            @include blockSize($stageMainNumberSpanSize, $stageMainNumberSpanSize);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 5px #fff, 0 0 0 6px $stageMainNumberSpanFirstBgColor,
+                0 0 0 11px #fff, 0 0 0 12px $stageMainNumberSpanFirstBgColor,
+                0 0 0 17px #fff, 0 0 0 18px $stageMainNumberSpanFirstBgColor;
+            background-color: $stageMainNumberSpanFirstBgColor;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .stage__main {
+        padding: 0 $stageMainPadding;
+    }
+}
+
+@media only screen and (min-width: 851px) {
+    .stage {
+        .container {
+            padding-bottom: $stageContainerPaddingBottom;
+        }
+    }
+
+    .stage__main {
+        @include flexbox(none, space-between, none);
+    }
+
+    .stage__item {
+        flex-basis: $stageItemFlexBasis;
+        padding: $stageItemPadding;
+    }
+
+    .stageMain__content {
+        padding: $stageContentPadding;
+
+        .stageMain__title {
+            font-size: $stageContentTitleFontSize;
+            padding-bottom: $stageContentTitlePaddingBottom;
+        }
+
+        .stageMain__text {
+            padding-top: $stageContentTextPaddingTop;
+            font-size: $stageContentTextFontSize;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 540px) {
+    .stage {
+        .container {
+            padding-bottom: $stageContainerPaddingBottom;
+        }
+    }
+
+    .stage__main {
+        @include flexbox(none, space-between, none);
+    }
+
+    .stage__item {
+        flex-basis: $mobileStageItemFlexBasis;
+        padding: $stageItemPadding;
+    }
+
+    .stageMain__content {
+        padding: $mobileStageContentPadding;
+
+        .stageMain__title {
+            font-size: $mobileStageContentTitleFontSize;
+            padding-bottom: $mobileStageContentTitlePaddingBottom;
+        }
+
+        .stageMain__text {
+            padding-top: $mobileStageContentTextPaddingTop;
+            font-size: $mobileStageContentTextFontSize;
+        }
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .stage {
+        .container {
+            padding-bottom: calc(.5em + 5vw);
+        }
+    }
+
+    .stage__main {
+        @include flexbox(column, none, none);
+    }
+
+    .stage__item {
+        padding: calc(.3em + 4vw) 0;
+    }
+
+    .stageMain__number {
+        display: none;
+    }
+
+    .stageMain__content {
+        padding-top: calc(.2em + 3vw);
+
+        .stageMain__title {
+            font-size: calc(.3em + 3vw);
+            padding-bottom: calc(.2em + 3vw);
+        }
+
+        .stageMain__text {
+            padding-top: calc(.3em + 3vw);
+            font-size: calc(.2em + 3vw);
+        }
+    }
+}
